@@ -1,11 +1,18 @@
 import React from 'react';
-import {Route} from 'react-router';
-import Index from './common/index';
-import Hello from './hello';
+import {Route, Redirect} from 'react-router';
+import Container from './container';
+import hello from './hello';
+import alert from './alert';
+import form from './form';
+import start from './start';
 
 const routes = (
-	<Route component={Index}>
-    	<Route {...Hello} />
+	<Route component={Container}>
+		<Redirect from="/" to="/start" />
+    	<Route {...hello} />
+    	<Route {...alert} />
+    	<Route {...form} />
+    	<Route {...start} />
 	</Route>
 );
 

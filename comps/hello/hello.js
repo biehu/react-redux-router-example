@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {addNum} from './helloState';
 import {connect} from 'react-redux';
 
@@ -8,16 +8,14 @@ import {connect} from 'react-redux';
 	addNum
 })
 export default class Hello extends React.Component {
-	
 	clickAddNum = () => {
 		this.props.addNum(this.props.num + 1);
 	}
 	
 	render() {
 		return (
-			<div>
-				<div className="red">Hello jy, {this.props.num}</div>
-				<button onClick={this.clickAddNum}>+</button>
+			<div className="red">
+				Hello, {this.props.num}<button onClick={this.clickAddNum}>+</button>
 			</div>
 		);
 	}
