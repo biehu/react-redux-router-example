@@ -1,0 +1,46 @@
+.slides {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.slide {
+  display: none;
+}
+.slide-active {
+  display: block;
+}
+.controls {
+}
+.slideWrap {
+	position: relative;
+	float: left;
+}
+.toggle {
+  background: blue;
+  color: white;
+  display: block;
+  padding: 20px;
+  position: absolute;
+  top: 218px;
+}
+.toggle-prev {
+  left: 0;
+}
+.toggle-next {
+  right: 0;
+}
+.pagination {
+  margin: 20px;
+  text-align: center;
+}
+.pager {
+  background-color: red;
+  display: inline-block;
+  height: 20px;
+  margin: 10px;
+  overflow: hidden;
+  text-indent: -9000px;
+  white-space: nowrap;
+  width: 20px;
+}

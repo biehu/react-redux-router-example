@@ -22,7 +22,8 @@ export default class Container extends React.Component {
 				<p>
 					<Link to="hello" style={LinkMargin}>Hello</Link> 
 					<Link to="alert" style={LinkMargin}>Alert</Link> 
-					<Link to="form">Form</Link>
+					<Link to="form" style={LinkMargin}>Form</Link>
+					<Link to="slide">Slide</Link>
 				</p>
 				{loading ? '加载中...' : children}
 			</div>

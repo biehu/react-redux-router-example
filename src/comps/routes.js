@@ -5,6 +5,7 @@ import hello from './hello';
 import alert from './alert';
 import form from './form';
 import start from './start';
+import slide from './slide';
 
 const routes = (
 	<Route component={Container}>
@@ -13,6 +14,7 @@ const routes = (
     	<Route {...alert} />
     	<Route {...form} />
     	<Route {...start} />
+    	<Route {...slide} />
 	</Route>
 );
 
