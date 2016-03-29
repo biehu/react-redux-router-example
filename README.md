@@ -14,4 +14,4 @@ npm install
 npm start
 ```
 
-ä¯ÀÀÆ÷´ò¿ªhttp://localhost:3000
+http://localhost:3000
