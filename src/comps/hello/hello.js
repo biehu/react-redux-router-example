@@ -15,7 +15,10 @@ export default class Hello extends React.Component {
 	render() {
 		return (
 			<div className="red">
-				Hello, {this.props.num}<button onClick={this.clickAddNum}>+</button>
+				Hello
+			<hr />
+			<h2>计数器</h2>
+				{this.props.num}<button onClick={this.clickAddNum}>+</button>
 			</div>
 		);
 	}

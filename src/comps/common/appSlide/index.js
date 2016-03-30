@@ -1,6 +1,6 @@
 import React from 'react';
 import CSSModules from 'react-css-modules';
-import styles from './style.css';
+import styles from './slide.css';
 
 @CSSModules(styles, { allowMultiple: true, errorWhenNotFound: false })
 export default class AppSlide extends React.Component {

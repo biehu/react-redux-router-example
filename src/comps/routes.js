@@ -6,6 +6,7 @@ import alert from './alert';
 import form from './form';
 import start from './start';
 import slide from './slide';
+import tab from './tab';
 
 const routes = (
 	<Route component={Container}>
@@ -15,6 +16,7 @@ const routes = (
     	<Route {...form} />
     	<Route {...start} />
     	<Route {...slide} />
+    	<Route {...tab} />
 	</Route>
 );
 

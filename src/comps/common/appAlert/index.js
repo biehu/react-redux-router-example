@@ -1,5 +1,8 @@
 import React from 'react';
+import CSSModules from 'react-css-modules';
+import styles from './alert.css';
 
+@CSSModules(styles, { allowMultiple: true, errorWhenNotFound: false })
 export default class AppAlert extends React.Component {
 	static propTypes = {
 		options: React.PropTypes.object.isRequired
@@ -9,22 +12,22 @@ export default class AppAlert extends React.Component {
 		alert: false
 	};
 	
-	handleClose = () => {
+	handleClose() {
 		this.setState({alert: false});
 	}
 	
-	componentWillReceiveProps = (nextProps) => {
+	componentWillReceiveProps(nextProps) {
 		this.setState({
 			alert: nextProps.options.alert
 		});
 	}
 	
-	handleConfirm = () => {
+	handleConfirm() {
 		this.props.options.confirmButton.action();
 		this.handleClose();
 	}
 	
-	render = () => {
+	render() {
 		var alert = null;
 		var options = this.props.options;
 		var buttons;
@@ -32,30 +35,30 @@ export default class AppAlert extends React.Component {
 		if (options.confirmButton) {  
 			buttons = (
 				<div>
-					<div className="btn-confirm" onClick={this.handleConfirm}>
+					<div styleName="btn-confirm" onClick={this.handleConfirm.bind(this)}>
 						{options.confirmButton.text || '确认'}
 					</div>
-					<div className="btn-cancel" onClick={this.handleClose}>取消</div>
+					<div styleName="btn-cancel" onClick={this.handleClose.bind(this)}>取消</div>
 				</div>
 			);
 		} else { 
 			buttons = (
-				<div className="btn-default" onClick={this.handleClose}>关闭</div>
+				<div styleName="btn-default" onClick={this.handleClose.bind(this)}>关闭</div>
 			);
 		}
 		
 		
 		if (this.state.alert) {
 			alert = (
-				<div className="alert">
-					<div className="alert-header">
+				<div styleName="alert">
+					<div styleName="alert-header">
 						{options.title}
-						<div className="alert-close" onClick={this.handleClose}></div>
+						<div styleName="alert-close" onClick={this.handleClose.bind(this)}>x</div>
 					</div>
-					<div className="alert-main">
+					<div styleName="alert-main">
 						{options.message}
 					</div>
-					<div className="alert-footer">
+					<div styleName="alert-footer">
 						{buttons}
 					</div>
 					
@@ -64,7 +67,7 @@ export default class AppAlert extends React.Component {
 		}
 		
 		return  (
-			<div className="alert">
+			<div styleName="alert">
 				{alert}
 			</div>
 		);
