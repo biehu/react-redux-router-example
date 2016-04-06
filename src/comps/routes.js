@@ -7,6 +7,10 @@ import form from './form';
 import start from './start';
 import slide from './slide';
 import tab from './tab';
+import TimerWrap from './timer/timerWrap';
+import MenuWrap from './menu/menuWrap';
+import SearchWrap from './search/searchWrap';
+import ServiceWrap from './service/serviceWrap';
 
 const routes = (
 	<Route component={Container}>
@@ -17,6 +21,11 @@ const routes = (
     	<Route {...start} />
     	<Route {...slide} />
     	<Route {...tab} />
+		
+		<Route path="/timer" component={TimerWrap} />
+		<Route path="/menu" component={MenuWrap} />
+		<Route path="/search" component={SearchWrap} />
+		<Route path="/service" component={ServiceWrap} />
 	</Route>
 );
 

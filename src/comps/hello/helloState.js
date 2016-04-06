@@ -1,4 +1,4 @@
-const ADD_HELLO_NUM = 'add_hello_num';
+const ADD_HELLO_NUM = 'ADD_HELLO_NUM';
 
 export function addNum(num) {
 	return {
@@ -11,7 +11,7 @@ const initState = {
 	num: 1
 };
 
-export default function helloState(state = initState, action) {
+export default function helloState(state = {}, action) {
 	switch (action.type) {
 		case ADD_HELLO_NUM:
 			return {

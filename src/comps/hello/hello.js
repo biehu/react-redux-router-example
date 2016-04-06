@@ -7,7 +7,11 @@ import {connect} from 'react-redux';
 }), {
 	addNum
 })
-export default class Hello extends React.Component {
+export default class Hello extends React.Component { 
+	static propTypes = {
+		num: React.PropTypes.number
+	};
+	
 	clickAddNum = () => {
 		this.props.addNum(this.props.num + 1);
 	}
