@@ -11,7 +11,7 @@ const initState = {
 	num: 1
 };
 
-export default function helloState(state = {}, action) {
+export default function helloState(state = initState, action) {
 	switch (action.type) {
 		case ADD_HELLO_NUM:
 			return {

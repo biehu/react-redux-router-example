@@ -12,6 +12,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'scripts/bundle.js',
+		chunkFilename: 'scripts/[chunkhash:8].bundle.js',
 		publicPath: '/dist/'
     },
 	plugins: [
@@ -37,7 +38,7 @@ module.exports = {
             loader: ExtractTextPlugin.extract('style', 'css')
         }, {
             test: /\.(png|jpg|jpeg|gif)$/,
-            loader: 'url-loader?limit=8192'
+            loader: 'url-loader?limit=8192&name=image/[hash:8].[name].[ext]'
         }]
     }
 };

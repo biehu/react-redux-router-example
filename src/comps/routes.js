@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route, Redirect} from 'react-router';
-import Container from './container';
+import Container from './common/container';
 import hello from './hello';
 import alert from './alert';
 import form from './form';

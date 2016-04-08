@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
-import '../statics/css/app.css';
+import '../../statics/css/app.css';
 
 @connect(state => ({
     loading: state.routerState.fetching // 等待浮层

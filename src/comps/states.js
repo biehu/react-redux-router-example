@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
 import helloState from './hello/helloState';
-import routerState from './routerState';
+import routerState from './common/routerState';
 
 export default combineReducers({
 	helloState,

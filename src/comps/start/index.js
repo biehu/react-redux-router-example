@@ -1,5 +1,5 @@
 import React from 'react';
-import {fetchNewComponent} from '../routerState';
+import {fetchNewComponent} from '../common/routerState';
 
 const Route = {
     path: 'start',
